@@ -1,0 +1,124 @@
+/* General specs */
+*,html{
+  margin: 0;
+  font-size: 15px;
+}
+
+html,body {
+  height: 100%;
+}
+
+input[type='checkbox'],
+input[type='file']{
+  display: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* Typography */
+body {
+  
+  font-family: ubuntu;
+  font-weight: regular;
+}
+
+h2 {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+/* Side Section */
+.sideSection {
+  width: 35%;
+  height: 100%;
+  padding: 10em 1.5em 0em 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.selectionSection{
+  margin-bottom: 3em;
+}
+
+.selectionGroup{
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectionGroupTitle {
+  margin-bottom: .5em;
+}
+
+.selectionOptionContainer {
+  display: flex;
+}
+
+.button {
+  display: inline-block;
+  width: 6rem;
+  height: 2rem;
+  background: #20a65683;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-right: solid 1px #20a656;
+}
+
+.button:hover,
+.button:focus{
+  cursor: pointer;
+  background: #20a656b2;
+}
+
+.fst-child {
+  border-radius: 1rem 0 0 1rem;
+}
+
+.lst-child {
+  border-radius: 0 1rem 1rem 0;
+  border: none;
+}
+
+.btn-switch:checked ~ .button{
+  background: #20a656;
+}
+
+
+/* Button Update */
+
+.btnUpload {
+  display: inline-flex;
+  width: 12rem;
+  height: 2rem;
+  background: #20a656c4;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  color: white;
+}
+
+.btnUpload:hover,
+.btnUpload:focus {
+  background: #20a656;
+}
+
+/* Map section */
+
+.mapSection { 
+  height: 100%;
+  width: 65%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}

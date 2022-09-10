@@ -1,0 +1,77 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/> 
+  <title>Mapa interactivo</title>
+</head>
+<body>
+  <div class="container">
+    <div class="sideSection">
+      <div class="selectionSection" style="display: none;">
+        <div class="selectionGroup">
+          <h2 class="selectionGroupTitle">GUSTAVO</h2>
+          <div class="selectionOptionContainer">
+            <div class="selectionGroupOption">
+              <input class="btn-switch" type="checkbox" id="lunesGustavo" value="lunesGustavo" onclick="cambiarColor(this.value)">
+              <label for="lunesGustavo" class="fst-child button">LUNES</label>
+            </div>
+            <div class="selectionGroupOption">
+              <input class="btn-switch" type="checkbox" id="martesGustavo" value="martesGustavo" onclick="cambiarColor(this.value)">
+              <label for="martesGustavo" class="button">MARTES</label>
+            </div>
+            <div class="selectionGroupOption">
+              <input class="btn-switch" type="checkbox" id="miercolesGustavo" value="miercolesGustavo" onclick="cambiarColor(this.value)">
+              <label for="miercolesGustavo" class="button">MIERCOLES</label>
+            </div>
+            <div class="selectionGroupOption">
+              <input class="btn-switch" type="checkbox" id="juevesGustavo" value="juevesGustavo" onclick="cambiarColor(this.value)">
+              <label for="juevesGustavo" class="button">JUEVES</label>
+            </div>
+            <div class="selectionGroupOption">
+              <input class="btn-switch" type="checkbox" id="viernesGustavo" value="viernesGustavo" onclick="cambiarColor(this.value)">
+              <label for="viernesGustavo" class="lst-child button">VIERNES</label>
+            </div>
+          </div>
+        </div>
+        <div class="selectionGroup">
+          <h2 class="selectionGroupTitle">ISAAC</h2>
+          <div class="selectionOptionContainer">
+            <div class="selectionGroupOption">
+              <input class="btn-switch" type="checkbox" id="miercolesIsaac" value="miercolesIsaac" onclick="cambiarColor(this.value)">
+              <label for="miercolesIsaac" class="fst-child button">MIERCOLES</label>
+            </div>
+            <div class="selectionGroupOption">
+              <input class="btn-switch" type="checkbox" id="viernesIsaac" value="viernesIsaac" onclick="cambiarColor(this.value)">
+              <label for="viernesIsaac" class="lst-child button">VIERNES</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="updateSection">
+        <input type="file" name="uploadFile" id="uploadFile" oninput="uplFile()">
+        <label for="uploadFile" class="btnUpload">CARGAR ARCHIVO</label>
+      </div>
+    </div>
+
+    <div class="mapSection">
+      <div class="map" id="map"></div>
+    </div>
+  </div>
+  <footer>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <script src="script.js"></script>
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <p id="test"></p>
+  </footer>
+</body>
+</html>
